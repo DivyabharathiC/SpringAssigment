@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    instance:
+    preferIpAddress: true
+    hostname: localhost
+spring:
+  application:
+    name: customerMongoDemo
+  cloud:
+    discovery:
+      enabled: true
+server:
+  port: 8069
+  data:
+    mongodb:
+      database: customer_db
+      port: 27017
