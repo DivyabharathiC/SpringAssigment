@@ -17,7 +17,7 @@ public class RouteConfig {
                 .route("Customer-client", rt -> rt.path("/customerhello/**")
                         .uri("http://localhost:8069/"))
                 .route("Account-server", rt -> rt.path("/account/**")
-                        .uri("http://localhost:8078/"))
+                        .uri("http://localhost:8088/"))
                 .build();
 
     }

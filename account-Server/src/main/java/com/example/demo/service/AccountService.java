@@ -17,8 +17,8 @@ public class AccountService {
 
     }
 
-    public void createAccount(Account account)
+    public Account createAccount(Account account)
     {
-        accountRepo.save(account);
+       return accountRepo.save(account);
     }
 }

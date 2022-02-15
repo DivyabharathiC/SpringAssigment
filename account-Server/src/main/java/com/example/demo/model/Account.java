@@ -4,10 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name="accountholderdata")
-@AllArgsConstructor
+//@AllArgsConstructor
 //@NoArgsConstructor
 @Data
 public class Account {
@@ -15,8 +16,8 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String accountHolderName;
-    private String accountType;
+    @NotBlank(message="Account cannot be null")
+    String CustomerAccNum;
 
 //    String Nominee;
 //    String Branch;
@@ -24,9 +25,9 @@ public class Account {
 //    String IFSC;
 
 
-    public Account(String accountHolderName, String accountType) {
-        this.accountHolderName = accountHolderName;
-        this.accountType = accountType;
+    public Account(int id, String customerAccNum) {
+        this.id = id;
+        this.CustomerAccNum = customerAccNum;
     }
 
     public Account()

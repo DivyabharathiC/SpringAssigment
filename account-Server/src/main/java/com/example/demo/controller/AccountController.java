@@ -5,6 +5,7 @@ import com.example.demo.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -20,9 +21,11 @@ public class AccountController {
     }
 
     @PostMapping("/createaccount")
-    public void createAccount(@RequestBody Account account)
+    public  String   createAccount( @Valid @RequestBody String CusAccnum)
     {
-        Account account1 =new Account(account.getAccountHolderName(), account.getAccountType());
-        accountService.createAccount(account1);
+        Account account1 =new Account();
+
+        account1.setCustomerAccNum(CusAccnum);
+        return accountService.createAccount(account1).getCustomerAccNum();
     }
 }

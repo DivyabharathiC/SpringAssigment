@@ -6,11 +6,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -22,6 +23,7 @@ public class CustomerController {
 
     @Autowired
     CustomerService customerService;
+
 
     @GetMapping("/customer")
     public ResponseEntity<List<Customer>> getAllCustomer(@RequestParam(required = false) String name) {
@@ -70,6 +72,7 @@ public class CustomerController {
     @PostMapping("/postcustomer")
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
         try {
+
             Customer _customer = customerService.addCustomer(new Customer(customer.getName(), customer.getCustomerAccNum(),customer.getAge(),customer.getPhoneNum()));
             return new ResponseEntity<>(_customer, HttpStatus.CREATED);
         } catch (Exception e) {
