@@ -15,5 +15,13 @@ server:
   port: 8069
   data:
     mongodb:
-      database: customer_db
+      database: customer_dbnew
       port: 27017
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      health:
+        show-details=always:
