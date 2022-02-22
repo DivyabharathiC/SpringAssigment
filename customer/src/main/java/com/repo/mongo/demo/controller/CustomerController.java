@@ -37,28 +37,23 @@ public class CustomerController {
     @Autowired
     CustomerRepo customerRepo;
 
-    @GetMapping("/getAllCustomer")
-    public ResponseEntity<List<Customer>> getAllCustomer(){
-        return new ResponseEntity<>(customerService.getAllCustomer(),HttpStatus.OK);
-    }
-
     @GetMapping("/customer")
     public ResponseEntity<List<Customer>> getAllCustomer(@RequestParam(required = false) String name) {
         try {
-//            List<Customer> customers = new ArrayList<>();
-//           // Customer customer = new Customer();
-//            Customer customer;
-//            if (name == null){
-//                customerService.getAllCustomer().forEach(customers::add);}
-//            else{
-//                customer = customerService.getCustomerByName(name);
-//            customers.add(customer);}
-//
-//            if (customers.isEmpty()) {
-//                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//            }
-            return new ResponseEntity<>(customerService.getAllCustomer(),HttpStatus.OK);
-          //  return new ResponseEntity<>(customers, HttpStatus.OK);
+            List<Customer> customers = new ArrayList<>();
+            Customer customer = new Customer();
+
+            if (name == null)
+                customerService.getAllCustomer().forEach(customers::add);
+            else
+                customer = customerService.getCustomerByName(name);
+            customers.add(customer);
+
+            if (customers.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+
+            return new ResponseEntity<>(customers, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }

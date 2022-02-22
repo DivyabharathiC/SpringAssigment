@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "ACCOUNT-SERVER", fallbackFactory = HystrixFallBackFactory.class)//url="http://localhost:8088")
+@FeignClient(name = "ACCOUNT-SERVER", fallbackFactory = HystrixFallBackFactory.class)
 public interface AccountFeign {
     @GetMapping(value = "/account/id/{id}")
     Account getIds(@PathVariable Integer id);
 
-//    @GetMapping(value = "/account/id/{id}")
-//    List<Account> getById(@PathVariable("id") Integer id);
+
 @DeleteMapping(value = "/accounts/account/{id}")
 Boolean deleteMappedAcc(@PathVariable String id);
 }
