@@ -8,8 +8,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AccountRepo extends JpaRepository<Account,Integer> {
+public interface AccountRepo extends JpaRepository<Account, Integer> {
     List<Account> findByCustomerId(Integer id);
 
     Account findByAccountId(Integer id);
+
 }

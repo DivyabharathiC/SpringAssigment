@@ -1,0 +1,212 @@
+2022-02-25 12:00:38.375  INFO [customerMongoDemo,,] 24320 --- [restartedMain] c.r.mongo.demo.CustomerMongoApplication  : Starting CustomerMongoApplication using Java 1.8.0_261 on MAVCHN0821151 with PID 24320 (C:\Users\divyabharathic\IdeaProjects\customer\target\classes started by divyabharathic in C:\Users\divyabharathic\IdeaProjects\customer)
+2022-02-25 12:00:38.376  INFO [customerMongoDemo,,] 24320 --- [restartedMain] c.r.mongo.demo.CustomerMongoApplication  : No active profile set, falling back to default profiles: default
+2022-02-25 12:00:38.428  INFO [customerMongoDemo,,] 24320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 12:00:38.458  INFO [customerMongoDemo,,] 24320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 12:00:39.722  INFO [customerMongoDemo,,] 24320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-02-25 12:00:39.875  INFO [customerMongoDemo,,] 24320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 1 MongoDB repository interfaces.
+2022-02-25 12:00:40.211  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d21a51-3bbb-3931-8b18-a513e8f54bf0
+2022-02-25 12:00:41.191  WARN [customerMongoDemo,,] 24320 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-02-25 12:00:41.191  INFO [customerMongoDemo,,] 24320 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-02-25 12:00:41.201  INFO [customerMongoDemo,,] 24320 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@27f5112e
+2022-02-25 12:00:41.961  WARN [customerMongoDemo,,] 24320 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2022-02-25 12:00:43.627  INFO [customerMongoDemo,,] 24320 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-02-25 12:00:43.727  INFO [customerMongoDemo,,] 24320 --- [cluster-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:915}] to localhost:27017
+2022-02-25 12:00:43.727  INFO [customerMongoDemo,,] 24320 --- [cluster-rtt-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:914}] to localhost:27017
+2022-02-25 12:00:43.728  INFO [customerMongoDemo,,] 24320 --- [cluster-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=46642600}
+2022-02-25 12:00:43.826  WARN [customerMongoDemo,,] 24320 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-25 12:00:43.972  WARN [customerMongoDemo,,] 24320 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-25 12:00:45.401  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8069 (http)
+2022-02-25 12:00:45.410  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 12:00:45.410  INFO [customerMongoDemo,,] 24320 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 12:00:45.523  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 12:00:45.523  INFO [customerMongoDemo,,] 24320 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7064 ms
+2022-02-25 12:00:45.670  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 12:00:46.177  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'ACCOUNT-SERVER' URL not provided. Will try picking an instance via load-balancing.
+2022-02-25 12:00:46.258  WARN [customerMongoDemo,,] 24320 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-02-25 12:00:46.258  INFO [customerMongoDemo,,] 24320 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-02-25 12:00:48.426  INFO [customerMongoDemo,,] 24320 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-25 12:00:48.554  WARN [customerMongoDemo,,] 24320 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-25 12:00:48.720  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
+2022-02-25 12:00:48.798  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-25 12:00:48.894  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-25 12:00:48.905  INFO [customerMongoDemo,,] 24320 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:00:48.952  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-25 12:00:48.953  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-25 12:00:48.953  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-25 12:00:48.953  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-25 12:00:48.953  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-25 12:00:48.954  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-25 12:00:48.954  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-25 12:00:49.872  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-25 12:00:49.876  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-25 12:00:49.879  INFO [customerMongoDemo,,] 24320 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-25 12:00:49.883  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1645770649882 with initial instances count: 2
+2022-02-25 12:00:49.890  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CUSTOMERMONGODEMO with eureka with status UP
+2022-02-25 12:00:49.891  INFO [customerMongoDemo,,] 24320 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1645770649891, current=UP, previous=STARTING]
+2022-02-25 12:00:49.897  INFO [customerMongoDemo,,] 24320 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERMONGODEMO/MAVCHN0821151.mavericsystems.lan:customerMongoDemo:8069: registering service...
+2022-02-25 12:00:49.925  INFO [customerMongoDemo,,] 24320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8069 (http) with context path ''
+2022-02-25 12:00:49.928  INFO [customerMongoDemo,,] 24320 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8069
+2022-02-25 12:00:49.964  INFO [customerMongoDemo,,] 24320 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERMONGODEMO/MAVCHN0821151.mavericsystems.lan:customerMongoDemo:8069 - registration status: 204
+2022-02-25 12:00:50.453  INFO [customerMongoDemo,,] 24320 --- [restartedMain] c.r.mongo.demo.CustomerMongoApplication  : Started CustomerMongoApplication in 13.022 seconds (JVM running for 13.748)
+2022-02-25 12:01:40.304  INFO [customerMongoDemo,e79fd52851217bfa,e79fd52851217bfa] 24320 --- [http-nio-8069-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 12:01:40.304  INFO [customerMongoDemo,e79fd52851217bfa,e79fd52851217bfa] 24320 --- [http-nio-8069-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 12:01:40.305  INFO [customerMongoDemo,e79fd52851217bfa,e79fd52851217bfa] 24320 --- [http-nio-8069-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-25 12:01:40.339  INFO [customerMongoDemo,e79fd52851217bfa,e79fd52851217bfa] 24320 --- [http-nio-8069-exec-1] c.r.m.d.controller.CustomerController    : This is customer log
+2022-02-25 12:01:40.395  INFO [customerMongoDemo,e79fd52851217bfa,e79fd52851217bfa] 24320 --- [http-nio-8069-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:916}] to localhost:27017
+2022-02-25 12:01:41.943  WARN [customerMongoDemo,,] 24320 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-02-25 12:01:41.946  WARN [customerMongoDemo,,] 24320 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:151) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:169) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:159) ~[spring-cloud-sleuth-zipkin-3.1.0.jar:3.1.0]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) [zipkin-reporter-2.16.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_261]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_261]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[na:1.8.0_261]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_261]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_261]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_261]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[na:1.8.0_261]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_261]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_261]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_261]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_261]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_261]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_261]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_261]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_261]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226) ~[na:1.8.0_261]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_261]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_261]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_261]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.15.jar:5.3.15]
+	... 9 common frames omitted
+
+2022-02-25 12:05:48.969  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:10:48.971  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:15:48.979  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:20:48.985  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:25:49.000  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:30:49.003  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:35:49.014  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:40:49.030  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:45:49.044  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:50:49.051  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 12:55:49.057  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 13:00:49.069  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 13:41:49.822  INFO [customerMongoDemo,,] 24320 --- [cluster-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:701) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:579) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:415) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:374) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:216) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_261]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_261]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_261]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_261]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_261]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:718) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:576) ~[mongodb-driver-core-4.4.1.jar:na]
+	... 5 common frames omitted
+
+2022-02-25 13:41:49.889  INFO [customerMongoDemo,,] 24320 --- [cluster-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:917}] to localhost:27017
+2022-02-25 13:41:49.889  INFO [customerMongoDemo,,] 24320 --- [cluster-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=58580100}
+2022-02-25 13:44:24.671  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 13:49:24.686  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 14:49:06.962  INFO [customerMongoDemo,,] 24320 --- [cluster-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:701) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:579) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:415) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:374) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:216) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_261]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_261]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_261]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_261]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_261]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:718) ~[mongodb-driver-core-4.4.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:576) ~[mongodb-driver-core-4.4.1.jar:na]
+	... 5 common frames omitted
+
+2022-02-25 14:49:06.980  INFO [customerMongoDemo,,] 24320 --- [cluster-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:920}] to localhost:27017
+2022-02-25 14:49:06.980  INFO [customerMongoDemo,,] 24320 --- [cluster-ClusterId{value='62187793bc8a97185a2e7493', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15163800}
+2022-02-25 14:50:40.631  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 14:55:40.641  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 15:00:40.646  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 15:05:40.657  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 15:10:40.672  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 15:15:40.686  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 15:55:07.517  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:03:23.385  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:08:23.400  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:13:23.408  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:18:23.422  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:23:23.434  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:28:23.441  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:33:23.450  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:38:23.461  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:43:23.477  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:48:23.480  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:53:23.483  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 16:58:23.494  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:03:23.496  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:08:23.499  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:13:23.501  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:18:23.515  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:23:23.524  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:28:23.532  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:33:23.547  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:38:23.558  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:43:23.563  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:48:23.576  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:53:23.585  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 17:58:23.601  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 18:03:23.604  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 18:08:23.612  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 18:13:23.624  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:03:30.529  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:08:30.540  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:13:30.553  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:18:30.555  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:23:30.559  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:28:30.572  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:33:30.577  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:38:30.593  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:43:30.612  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:48:30.627  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:53:30.632  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 20:58:30.635  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 21:03:30.640  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 21:08:30.646  INFO [customerMongoDemo,,] 24320 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-25 21:12:20.764  INFO [customerMongoDemo,,] 24320 --- [Thread-6] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-02-25 21:12:20.788  INFO [customerMongoDemo,,] 24320 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CUSTOMERMONGODEMO with eureka with status DOWN
+2022-02-25 21:12:20.788  INFO [customerMongoDemo,,] 24320 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1645803740788, current=DOWN, previous=UP]
+2022-02-25 21:12:20.789  INFO [customerMongoDemo,,] 24320 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERMONGODEMO/MAVCHN0821151.mavericsystems.lan:customerMongoDemo:8069: registering service...
+2022-02-25 21:12:20.816  INFO [customerMongoDemo,,] 24320 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERMONGODEMO/MAVCHN0821151.mavericsystems.lan:customerMongoDemo:8069 - registration status: 204
+2022-02-25 21:12:21.057  INFO [customerMongoDemo,,] 24320 --- [SpringApplicationShutdownHook] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:929}] to localhost:27017
+2022-02-25 21:12:22.052  INFO [customerMongoDemo,,] 24320 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-25 21:12:25.066  INFO [customerMongoDemo,,] 24320 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-25 21:12:25.080  INFO [customerMongoDemo,,] 24320 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERMONGODEMO/MAVCHN0821151.mavericsystems.lan:customerMongoDemo:8069 - deregister  status: 200
+2022-02-25 21:12:25.090  INFO [customerMongoDemo,,] 24320 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

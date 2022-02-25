@@ -10,10 +10,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableEurekaClient
 @EnableFeignClients
 
-public class CustomerMongoApplication  {
+public class CustomerMongoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CustomerMongoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CustomerMongoApplication.class, args);
+    }
 
 }

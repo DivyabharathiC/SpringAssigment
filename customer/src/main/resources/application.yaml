@@ -15,7 +15,7 @@ server:
   port: 8069
   data:
     mongodb:
-      database: customer_dbnew
+      database: BankDB
       port: 27017
 
 management:
@@ -25,3 +25,8 @@ management:
         include: "*"
       health:
         show-details=always:
+
+
+#logging:
+#  file:
+#    name: C:/Users/divyabharathic/IdeaProjects/customer/src/logs/customer_service.log

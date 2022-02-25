@@ -3,65 +3,42 @@ package com.example.demo.controller;
 import com.example.demo.exceptions.AccountNotFoundException;
 import com.example.demo.model.Account;
 import com.example.demo.service.AccountService;
-import org.hibernate.query.criteria.internal.expression.function.CurrentDateFunction;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.auditing.CurrentDateTimeProvider;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.print.attribute.standard.DateTimeAtCreation;
 import javax.validation.Valid;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 @RestController
 @RequestMapping("/account")
 public class AccountController {
+
+    String accNotFound = "Account Not found for : ";
     @Autowired
-    AccountService accountService;
+    AccountService accountServiceImpl;
 
     @GetMapping("/getaccount")
-    public List<Account> getAccount()
-    {
-        return accountService.getAccount();
+    public List<Account> getAccount() {
+        return accountServiceImpl.getAccount();
     }
 
-    @PostMapping("/createaccount")
-    public  Account   createAccount( @Valid @RequestBody Account CusAccDetails)
-    {
-        Account account1 =new Account();
-
-        account1.setCustomerAccNum(CusAccDetails.getCustomerAccNum());
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date date = new Date();
-        account1.setCreatedDate(date);
-        account1.setAccountBalance(CusAccDetails.getAccountBalance());
-        return accountService.createAccount(account1);
-       // return accountService.createAccount(account1).getCustomerAccNum();
+    @PostMapping("/createaccount") //this method is only called from customer application
+    public Account addAccount(@Valid @RequestBody Account account) {
+        Account account1 = new Account(account.getCustomerId(), account.getCustomerAccNum(), account.getAccountBalance(), account.getAccountType(), account.getIsActive());
+        return accountServiceImpl.createAccount(account1);
     }
 
-    @GetMapping("/id/{id}")
-    public ResponseEntity<Account> getById(@PathVariable("id") Integer id){
-        Account one= accountService.findById(id);
-        return  new ResponseEntity<Account>(one, HttpStatus.OK);
-    }
-    @GetMapping("/account/{id}")
-    public Account getAccountDetailsByCustomerId(@PathVariable("id") Integer id) {
-        return (Account) accountService.getAccountDetailsByCustomerId(id);
+
+    @GetMapping("/customerid/{id}")
+    public List<Account> getAccountDetailsByCustomerId(@PathVariable("id") Integer id) {
+        return accountServiceImpl.getAccountDetailsByCustomerId(id);
     }
 
-    @DeleteMapping("/deleteMappedAccount/{id}")
-    public boolean deleteMappedAccount(@PathVariable("id") Integer id){
-        Account account = getAccountDetailsByCustomerId(id);
-        if(!accountService.isAccountActive(account.getAccountId())) {
-            throw new AccountNotFoundException("Account is not present in DB" + id);
-        }
-        accountService.deleteAccount(id);
-        return false ;
+    @DeleteMapping("/deleteCustomerAndAccount/{id}")// this method is called from customer application
+    public String deleteCustomerAndAccount(@PathVariable("id") Integer id) {
+        if (!(accountServiceImpl.isActive(id)))
+            throw new AccountNotFoundException(accNotFound + id);
+        return accountServiceImpl.deleteCustomerAndAccount(id);
     }
 
 }
