@@ -27,6 +27,6 @@ management:
         show-details=always:
 
 
-#logging:
-#  file:
-#    name: C:/Users/divyabharathic/IdeaProjects/customer/src/logs/customer_service.log
+logging:
+  file:
+    name: C:/Users/divyabharathic/IdeaProjects/customer/src/logs/customer_service.log

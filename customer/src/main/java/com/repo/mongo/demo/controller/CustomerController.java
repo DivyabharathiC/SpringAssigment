@@ -21,7 +21,7 @@ import java.util.List;
 @Slf4j
 
 
-@RequestMapping("/customerhello")
+@RequestMapping("/customer")
 public class CustomerController {
 
     private static Logger logger = LoggerFactory.getLogger(CustomerController.class);
@@ -35,8 +35,9 @@ public class CustomerController {
     String custNotFound = "Customer Not Found with : ";
     String custAlreadyExist = "Customer Already exist : ";
 
-    @PostMapping("/addCustomer")
+    @PostMapping("/add-Customer")
     public ResponseEntity<CustomerAccountResponseDetails> addCustomer(@Valid @RequestBody CustomerAccountResponseDetails customerAccountResponseDetails) {
+        logger.info("Starting of customer post request from customer application");
         try {
             Integer customerId = customerAccountResponseDetails.getCustomer().getCustomerId();
             if (customerService.customerPresent(customerId) != null) {
@@ -49,14 +50,16 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/getAllCustomer")
+    @GetMapping("/customers")
     public ResponseEntity<List<Customer>> getAllCustomer() {
-        logger.info("This is customer log");
+        logger.info("Starting of customer get request from customer application");
         return new ResponseEntity<>(customerService.getAllCustomer(), HttpStatus.OK);
+
     }
 
-    @GetMapping("/customerDetails/{id}")
+    @GetMapping("/customers/{customerId}")
     public ResponseEntity<CustomerAllData> getAllDataByCustomerId(@PathVariable("id") Integer id) {
+        logger.info("Starting of customer get request using customerID from customer application");
         if (Boolean.FALSE.equals(customerService.customerIsActive(id))) {
             throw new CustomerNotFoundException(custNotFound + id);
         }
@@ -65,16 +68,19 @@ public class CustomerController {
 
     }
 
-    @DeleteMapping("/deleteCustomer/{id}")
+    @DeleteMapping("/remove-Customer/{id}")
     public ResponseEntity<String> deleteCustomerDetails(@PathVariable("id") Integer id) {
+
+        logger.info("Starting of customer delete request from customer application");
         if (Boolean.FALSE.equals(customerService.customerIsActive(id))) {
             throw new CustomerNotFoundException(custNotFound + id);
         }
         return new ResponseEntity<>(customerService.deleteCustomer(id), HttpStatus.OK);
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/update-customer/{id}")
     public ResponseEntity<Customer> updateCustomer(@PathVariable("id") Integer id, @Valid @RequestBody UpdateCusDetails customer) {
+        logger.info("Starting of customer put request from customer application");
         if (Boolean.FALSE.equals(customerService.customerIsActive(id))) {
             throw new CustomerNotFoundException(custNotFound + id);
         }
