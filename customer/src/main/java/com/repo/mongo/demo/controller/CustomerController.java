@@ -17,6 +17,9 @@ import javax.validation.Valid;
 
 import java.util.List;
 
+import static com.repo.mongo.demo.constant.Constant.*;
+
+
 @RestController
 @Slf4j
 
@@ -32,16 +35,13 @@ public class CustomerController {
     AccountFeign accountFeign;
 
 
-    String custNotFound = "Customer Not Found with : ";
-    String custAlreadyExist = "Customer Already exist : ";
-
-    @PostMapping("/add-Customer")
+    @PostMapping(Add_Customer)
     public ResponseEntity<CustomerAccountResponseDetails> addCustomer(@Valid @RequestBody CustomerAccountResponseDetails customerAccountResponseDetails) {
         logger.info("Starting of customer post request from customer application");
         try {
             Integer customerId = customerAccountResponseDetails.getCustomer().getCustomerId();
             if (customerService.customerPresent(customerId) != null) {
-                throw new CustomerAlreadyExistException(custAlreadyExist + customerId);
+                throw new CustomerAlreadyExistException(CustomerAlreadyExist + customerId);
             }
         } catch (Exception e) {
             return new ResponseEntity<>(customerAccountResponseDetails, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -50,39 +50,39 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/customers")
+    @GetMapping(GetAll_Customer)
     public ResponseEntity<List<Customer>> getAllCustomer() {
         logger.info("Starting of customer get request from customer application");
         return new ResponseEntity<>(customerService.getAllCustomer(), HttpStatus.OK);
 
     }
 
-    @GetMapping("/customers/{customerId}")
-    public ResponseEntity<CustomerAllData> getAllDataByCustomerId(@PathVariable("id") Integer id) {
+    @GetMapping(Get_CustomerByID)
+    public ResponseEntity<CustomerAllData> getAllDataByCustomerId(@PathVariable Integer id) {
         logger.info("Starting of customer get request using customerID from customer application");
         if (Boolean.FALSE.equals(customerService.customerIsActive(id))) {
-            throw new CustomerNotFoundException(custNotFound + id);
+            throw new CustomerNotFoundException(CustomerNotFound + id);
         }
 
         return new ResponseEntity<>(customerService.getAllDataByCustomerId(id), HttpStatus.FOUND);
 
     }
 
-    @DeleteMapping("/remove-Customer/{id}")
+    @DeleteMapping(Delete_CustomerByID)
     public ResponseEntity<String> deleteCustomerDetails(@PathVariable("id") Integer id) {
 
         logger.info("Starting of customer delete request from customer application");
         if (Boolean.FALSE.equals(customerService.customerIsActive(id))) {
-            throw new CustomerNotFoundException(custNotFound + id);
+            throw new CustomerNotFoundException(CustomerNotFound + id);
         }
         return new ResponseEntity<>(customerService.deleteCustomer(id), HttpStatus.OK);
     }
 
-    @PutMapping("/update-customer/{id}")
+    @PutMapping(Update_CustomerByID)
     public ResponseEntity<Customer> updateCustomer(@PathVariable("id") Integer id, @Valid @RequestBody UpdateCusDetails customer) {
         logger.info("Starting of customer put request from customer application");
         if (Boolean.FALSE.equals(customerService.customerIsActive(id))) {
-            throw new CustomerNotFoundException(custNotFound + id);
+            throw new CustomerNotFoundException(CustomerNotFound + id);
         }
         return new ResponseEntity<>(customerService.updateCustomer(id, customer), HttpStatus.OK);
     }

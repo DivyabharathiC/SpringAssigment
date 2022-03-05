@@ -11,23 +11,24 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+import static com.example.demo.constant.Constant.*;
+
 @RestController
 @RequestMapping("/account")
 public class AccountController {
 
     private static Logger logger = LoggerFactory.getLogger(AccountController.class);
 
-    String accNotFound = "Account Not found for : ";
     @Autowired
     AccountService accountServiceImpl;
 
-    @GetMapping("/accounts")
+    @GetMapping(GetAll_AccountData)
     public List<Account> getAccount() {
         logger.info("Starting of accounts get request from accounts application");
         return accountServiceImpl.getAccount();
     }
 
-    @PostMapping("/add-account")
+    @PostMapping(Add_AccountData)
     public Account addAccount(@Valid @RequestBody Account account) {
         logger.info("Starting of accounts post request from accounts application");
         Account account1 = new Account(account.getCustomerId(), account.getCustomerAccNum(), account.getAccountBalance(), account.getAccountType(), account.getIsActive());
@@ -35,13 +36,13 @@ public class AccountController {
     }
 
 
-    @GetMapping("/customer-id/{id}")
+    @GetMapping(Get_AccountByCustomerID)
     public List<Account> getAccountDetailsByCustomerId(@PathVariable("id") Integer id) {
         logger.info("Starting of accounts get request using customerid from accounts application");
         return accountServiceImpl.getAccountDetailsByCustomerId(id);
     }
 
-    @DeleteMapping("/remove-account/{id}")
+    @DeleteMapping(Delete_AccountByCustomerID)
     public String deleteCustomerAndAccount(@PathVariable("id") Integer id) {
         logger.info("Starting of accounts delete request from accounts application");
         if (!(accountServiceImpl.isActive(id)))
